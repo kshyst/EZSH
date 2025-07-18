@@ -9,16 +9,16 @@ sudo apt-get install -y zsh git curl
 echo "----Installing Oh My Zsh-----"
 export RUNZSH=no
 export CHSH=no
-ZSH="$HOME/.oh-my-zsh"
-if [ -d "$ZSH" ]; then
-    echo "Oh My Zsh already installed in $ZSH. Skipping installation."
+OHZSH="$HOME/.oh-my-zsh"
+if [ -d "$OHZSH" ]; then
+    echo "Oh My Zsh already installed in $OHZSH. Skipping installation."
 else
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 echo "-----Installing Powerlevel10k-----"
-if [ ! -d "$ZSH/custom/themes/powerlevel10k" ]; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH/custom/themes/powerlevel10k"
+if [ ! -d "$OHZSH/custom/themes/powerlevel10k" ]; then
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$OHZSH/custom/themes/powerlevel10k"
 else
     echo "Powerlevel10k already installed. Skipping."
 fi
