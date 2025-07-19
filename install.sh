@@ -1,10 +1,14 @@
 #!/bin/bash
 
-set -e
+set -ex
 
 echo "-----Installing zsh-----"
-sudo apt-get update
-sudo apt-get install -y zsh git curl
+if [ ! -d /usr/bin/zsh ]; then
+    echo "zsh is already installed. Skipping."
+else 
+    sudo apt-get update
+    sudo apt-get install -y zsh git
+fi
 
 echo "----Installing Oh My Zsh-----"
 export RUNZSH=no
