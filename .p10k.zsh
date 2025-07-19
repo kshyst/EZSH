@@ -1,0 +1,8 @@
+typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status command_execution_time background_jobs time)
+typeset -g POWERLEVEL9K_MODE='awesome-patched'
+typeset -g POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+typeset -g POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+typeset -g POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="❯ "
+typeset -g POWERLEVEL9K_TIME_FORMAT='%D{%H:%M:%S}'
