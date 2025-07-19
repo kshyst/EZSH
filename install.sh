@@ -33,6 +33,13 @@ if ! grep -q 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' "$HOME/.zshrc"; th
     echo 'POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true' >> "$HOME/.zshrc"
 fi
 
+echo "-----Downloading custom zsh settings from repo-----"
+curl -sL https://raw.githubusercontent.com/kshyst/EZSH/master/.p10k.zsh -o $HOME/.p10k.zsh
+
+if ! grep -q 'source ~/.p10k.zsh' $HOME/.zshrc; then
+    echo '[[ -r ~/.p10k.zsh ]] && source ~/.p10k.zsh' >> $HOME/.zshrc
+fi
+
 echo "-----Setting zsh as default shell------"
 sudo chsh -s "$(which zsh)" "$USER"
 
